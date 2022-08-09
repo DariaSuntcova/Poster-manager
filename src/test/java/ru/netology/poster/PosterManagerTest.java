@@ -80,7 +80,7 @@ public class PosterManagerTest {
     }
 
     @Test
-    public void shouldFindLastWithOneMovie(){
+    public void shouldFindLastWithOneMovie() {
         PosterManager poster = new PosterManager(1);
 
         poster.addNewMovie(movie1);
@@ -103,7 +103,7 @@ public class PosterManagerTest {
     }
 
     @Test
-    public void shouldFindLastWithoutMovies(){
+    public void shouldFindLastWithoutMovies() {
         PosterManager poster = new PosterManager(0);
 
         poster.addNewMovie(movie1);
@@ -124,8 +124,9 @@ public class PosterManagerTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
-    public void shouldFindLastBelowZero(){
+    public void shouldFindLastBelowZero() {
         PosterManager poster = new PosterManager(-1);
 
         poster.addNewMovie(movie1);
@@ -148,7 +149,7 @@ public class PosterManagerTest {
     }
 
     @Test
-    public void shouldFindLastMoreThanIs(){
+    public void shouldFindLastMoreThanIs() {
         PosterManager poster = new PosterManager(20);
 
         poster.addNewMovie(movie1);
@@ -169,9 +170,6 @@ public class PosterManagerTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
-
-
-
 
 
 }
