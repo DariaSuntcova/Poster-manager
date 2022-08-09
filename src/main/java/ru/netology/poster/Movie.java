@@ -2,16 +2,16 @@ package ru.netology.poster;
 
 
 public class Movie {
+
+    private int id;
     private String nameMovie;
     private String movieGenre;
 
 
-
-
-    public Movie(String nameMovie, String movieGenre) {
+    public Movie(int id, String nameMovie, String movieGenre) {
+        this.id = id;
         this.nameMovie = nameMovie;
         this.movieGenre = movieGenre;
-
     }
 
     public String getNameMovie() {
@@ -28,5 +28,13 @@ public class Movie {
 
     public void setMovieGenre(String movieGenre) {
         this.movieGenre = movieGenre;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
