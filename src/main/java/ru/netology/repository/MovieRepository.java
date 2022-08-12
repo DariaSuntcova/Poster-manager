@@ -28,13 +28,15 @@ public class MovieRepository {
     }
 
     public void removeById(int id) {
-        Movie[] tmp = new Movie[movies.length - 1];
-        for (int i = 0; i < movies.length; i++) {
-            if (movies[i].getId() != id) {
-                tmp[i] = movies[i];
+        if (findById(id) != null) {
+            Movie[] tmp = new Movie[movies.length - 1];
+            for (int i = 0; i < movies.length; i++) {
+                if (movies[i].getId() != id) {
+                    tmp[i] = movies[i];
+                }
             }
+            movies = tmp;
         }
-        movies = tmp;
     }
 
     public void removeAll() {
