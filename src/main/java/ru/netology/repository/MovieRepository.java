@@ -28,6 +28,7 @@ public class MovieRepository {
     }
 
     public void removeById(int id) {
+        if (findById(id) != null) {
             Movie[] tmp = new Movie[movies.length - 1];
             for (int i = 0; i < movies.length; i++) {
                 if (movies[i].getId() != id) {
@@ -36,6 +37,7 @@ public class MovieRepository {
             }
             movies = tmp;
         }
+    }
 
     public void removeAll() {
         movies = new Movie[0];
